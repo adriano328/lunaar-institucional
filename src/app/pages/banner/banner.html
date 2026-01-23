@@ -1,16 +1,25 @@
+<!-- <div class="flex flex-column container-banner">
+    <div class="logo"> -->
+<!-- <img src="assets/images/logo-fundo-transparente-tracado-branco.png" alt="Associação Lunaar"
+            style="cursor: pointer;" width="100" /> -->
+<!-- 
+    </div>
+    <div class="flex grid"> -->
+<!-- <div class="flex align-items-center justify-content-center col-12 md:col-6 lg:col-6">
+            <img src="/assets/images/slider-img.png" class="foto" alt="Animais para adoção" />
+        </div> -->
+<!-- <div class="flex container-time-line align-items-center col-12 md:col-4 lg:col-4">
 
-<div class="flex container-banner">
-      <app-header></app-header>
-    <div class="flex flex-row grid conteudo w-full">
-        <div class="flex w-7 justify-content-center container-imagem">
-            <img src="/assets/images/slider-img.png" height="80%" alt="Animais para adoção" />
-        </div>
-        <div class="flex align-items-start container-texto flex-column w-5">
+        </div> -->
+<!-- <div class="flex w-7 justify-content-center container-imagem">
+            <img src="/assets/images/slider-img.png" alt="Animais para adoção" />
+        </div> -->
+<!-- <div class="flex align-items-start container-texto flex-column w-5">
             <div class="mt-5">
                 <h2 class="adote">ADOTE UM ANIMAL</h2>
                 <h1 class="salve">SALVE UMA VIDA</h1>
             </div>
-            <div class="btn-box flex gap-2 flex-wrap mt-3">
+            <div class="btn-box flex gap-2 flex-wrap">
                 <a href="https://wa.me/65992465672" target="_blank" rel="noopener" class="btn-hero">ADOTE</a>
                 <a href="https://wa.me/65992465672" target="_blank" rel="noopener" class="btn-hero voluntario outline">
                     SEJA UM VOLUNTÁRIO </a>
@@ -19,10 +28,65 @@
                 <div (click)="navegar('https://www.instagram.com/projetolunaar/')" style="cursor: pointer;">
                     <img src="/assets/images/icon-insta.png" height="30" width="30" alt="Animais para adoção" />
                 </div>
+            </div>
+        </div> -->
+<!-- </div>
+</div> -->
+
+<div class="flex flex-column container-banner">
+    <div class="flex justify-content-end logo">
+        <img src="assets/images/logo-fundo-transparente-tracado-branco.png" alt="Associação Lunaar"
+            style="cursor: pointer;" width="100" />
+    </div>
+
+    <div class="flex align-items-start justify-content-center flex-column p-5">
+        <div class="flex flex-column">
+            <span class="adote">ADOTE UM ANIMAL</span>
+            <span class="salve">SALVE UMA VIDA</span>
+        </div>
+        <div class="flex gap-2 mt-3 contianer-botoes">
+            <div class="botao-adote" (click)="navegar('https://wa.me/65992465672')">
+                <span class="texto">ADOTE</span>
+            </div>
+            <div class="botao-voluntario" (click)="navegar('https://wa.me/65992465672')">
+                <span class="texto">SEJA VOLUNTÁRIO</span>
+            </div>
+        </div>
+        <div class="flex gap-3 pt-2">
+            <img src="assets/images/icon-insta.png"
+                (click)="navegar('https://www.instagram.com/projetolunaar/reels/?__d=1%2F')" alt="Associação Lunaar"
+                style="cursor: pointer;" width="30" />
+            <img src="assets/images/icon-face.png" alt="Associação Lunaar"
+                (click)="navegar('https://www.facebook.com/ProjetoLunaar/?locale=pt_BR')" style="cursor: pointer;"
+                width="30" />
+            <img src="assets/images/icon-whats.png" alt="Associação Lunaar"
+                (click)="navegar('https://api.whatsapp.com/send/?phone=65992465672&text&type=phone_number&app_absent=0')"
+                style="cursor: pointer;" width="30" />
+        </div>
+        <div class="flex w-full align-items-end justify-content-end gap-2 flex-column">
+            <span class="texto">CONTRIBUA (PIX)</span>
+            <img src="assets/images/pix-icon.png" alt="Associação Lunaar" style="cursor: pointer;" width="150" />
+            <span class="mt-1 texto">Cada adoção transforma duas vidas: a deles e a sua.
+            </span>
+        </div>
+    </div>
+
+    <div class="flex grid">
+        <div class="flex align-items-center justify-content-center col-12 md:col-6 lg:col-6">
+            <!-- <img src="/assets/images/slider-img.png" class="foto" w    idth="70%" alt="Animais para adoção" /> -->
+            <div class="mt-5">
+
+            </div>
+            <!-- <div class="btn-box flex gap-2 flex-wrap">
+                <a href="https://wa.me/65992465672" target="_blank" rel="noopener" class="btn-hero">ADOTE</a>
+                <a href="https://wa.me/65992465672" target="_blank" rel="noopener" class="btn-hero voluntario outline">
+                    SEJA UM VOLUNTÁRIO </a>
+            </div>
+            <div class="flex flex-row gap-2">
                 <div (click)="navegar('https://www.instagram.com/projetolunaar/')" style="cursor: pointer;">
                     <img src="/assets/images/icon-insta.png" height="30" width="30" alt="Animais para adoção" />
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

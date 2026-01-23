@@ -1,111 +1,174 @@
+// .container-banner {
+//     width: 100%;
+//     background-color: greenyellow;
+//     .btn {
+//         padding: 12px 28px;
+//         font-weight: 800;
+//         border-radius: 6px;
+//         text-decoration: none;
+//     }
+
+//     .foto {
+//         width: 50%;
+//     }
+
+//     .btn.solid {
+//         background: #fff;
+//         color: #4c4d4c;
+//     }
+
+//     .adote,
+//     .salve {
+//         color: white;
+//     }
+
+//     .adote {
+//         font-size: 40px;
+
+//     }
+
+//     .salve {
+//         font-size: 60px;
+//     }
+
+//     .btn.outline {
+//         border: 2px solid #fff;
+//         color: #fff;
+//     }
+
+//     .btn-box {
+//         display: flex;
+//         gap: 16px;
+//         margin-top: 24px;
+//     }
+
+//     .voluntario {
+//         width: 230px;
+//     }
+
+//     .btn-hero {
+//         min-width: 160px;
+//         height: 48px;
+//         display: inline-flex;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 0 24px;
+//         border-radius: 4px;
+//         font-size: 14px;
+//         font-weight: 700;
+//         letter-spacing: 1px;
+//         text-transform: uppercase;
+//         text-decoration: none;
+//         background-color: #ffffff;
+//         color: #4c4d4c;
+//         border: 2px solid #ffffff;
+//         transition: all 0.3s ease;
+//     }
+
+//     .btn-hero:hover {
+//         background-color: transparent;
+//         color: #ffffff;
+//     }
+
+//     .btn-hero.outline {
+//         background-color: transparent;
+//         color: #ffffff;
+//         border: 2px solid #ffffff;
+//     }
+
+//     .btn-hero.outline:hover {
+//         background-color: #ffffff;
+//         color: #4c4d4c;
+//     }
+
+//     @media (max-width: 576px) {
+//         .btn-box {
+//             flex-direction: column;
+//             align-items: flex-start;
+//         }
+
+//         .btn-hero {
+//             width: 100%;
+//         }
+//     }
+
+//     @media (max-width: 768px) {
+//         .hero-animal {
+//             border: 1px solid red;
+//             display: none !important;
+//         }
+//     }
+// }
+
 .container-banner {
     width: 100%;
-    background-color: greenyellow;
-    .btn {
-        padding: 12px 28px;
-        font-weight: 800;
-        border-radius: 6px;
-        text-decoration: none;
-    }
+    height: 600px;
+    position: relative;
+    background-image: url('/assets/images/cat-and-dog.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 
-    .btn.solid {
-        background: #fff;
-        color: #4c4d4c;
+    .logo {
+        padding-right: 2em;
     }
 
     .adote,
     .salve {
         color: white;
+        font-weight: 800;
+    }
+
+    .texto {
+        color: white;
     }
 
     .adote {
-        font-size: 40px;
-
+        font-size: clamp(32px, 4vw, 40px);
     }
 
     .salve {
-        font-size: 60px;
+        font-size: clamp(36px, 6vw, 60px);
     }
 
-    .btn.outline {
-        border: 2px solid #fff;
-        color: #fff;
-    }
-
-    .btn-box {
-        display: flex;
-        gap: 16px;
-        margin-top: 24px;
-    }
-
-    .voluntario {
-        width: 230px;
-    }
-
-    .btn-hero {
-        min-width: 160px;
-        height: 48px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 24px;
-        border-radius: 4px;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
+    .botao-adote,
+    .botao-voluntario {
+        padding: 10px 28px;
         background-color: #ffffff;
-        color: #4c4d4c;
+        color: #000000;
+        font-weight: 700;
+        border-radius: 6px;
+        cursor: pointer;
         border: 2px solid #ffffff;
         transition: all 0.3s ease;
+
+        .texto {
+            font-size: 14px;
+        }
     }
 
-    .btn-hero:hover {
+    .botao-adote:hover,
+    .botao-voluntario:hover {
         background-color: transparent;
         color: #ffffff;
     }
 
-    .btn-hero.outline {
-        background-color: transparent;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-    }
-
-    .btn-hero.outline:hover {
-        background-color: #ffffff;
-        color: #4c4d4c;
-    }
-
-    @media (max-width: 576px) {
-        .btn-box {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .btn-hero {
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .hero-animal {
-            border: 1px solid red;
-            display: none !important;
-        }
+    .botao-adote span,
+    .botao-voluntario span {
+        color: inherit;
     }
 }
 
+.container-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(13, 14, 13, 0.5);
+    z-index: 1;
+}
 
-@media (max-width: 992px) {
-    .container-imagem {
-        display: none !important;
-    }
-
-    .container-texto {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
+.container-banner>* {
+    position: relative;
+    z-index: 2;
 }
