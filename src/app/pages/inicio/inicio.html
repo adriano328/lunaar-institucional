@@ -10,3 +10,23 @@
 <app-arrecadacao></app-arrecadacao>
 <app-nota-mt></app-nota-mt>
 <app-denuncia></app-denuncia>
+
+
+<div class="card flex justify-content-center">
+  @if (isBrowser) {
+    <p-dialog
+      [(visible)]="visible"
+      [modal]="true"
+      [dismissableMask]="true"
+      [appendTo]="'body'"
+      [style]="{ maxWidth: '90vw' }"
+      [contentStyle]="{ padding: '0' }"
+    >
+      <img (click)="navegar('https://rifa.digital/s/GBrREYKwaDJ')"
+        src="assets/images/rifa.jpg"
+        class="dialog-image"
+        alt="Animais para adoção"
+      />
+    </p-dialog>
+  }
+</div>

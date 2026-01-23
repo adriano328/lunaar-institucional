@@ -12,7 +12,6 @@ export class Banner {
 
 
   navegar(url: string) {
-    console.log('clicou:', url);
     window.open(url, '_blank', 'noopener');
   }
 }

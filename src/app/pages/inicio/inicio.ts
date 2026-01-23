@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Header } from '../../core/layout/header/header';
 import { Sobre } from '../sobre/sobre';
 import { Historia } from '../historia/historia';
@@ -11,6 +11,8 @@ import { ColetaDoacoes } from '../coleta-doacoes/coleta-doacoes';
 import { Arrecadacao } from '../arrecadacao/arrecadacao';
 import { DenunciaComponent } from '../denuncia/denuncia.component';
 import { NotaMtComponent } from '../nota-mt/nota-mt.component';
+import { DialogModule } from 'primeng/dialog';
+import { isPlatformBrowser } from '@angular/common';
 
 
 @Component({
@@ -18,12 +20,31 @@ import { NotaMtComponent } from '../nota-mt/nota-mt.component';
   standalone: true,
   imports: [
     Sobre, Historia, Banner, Fazemos, Equipe, NotaMtComponent,
-    Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent
+    Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent, DialogModule
   ],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',
 })
 export class Inicio {
 
-  
+  isBrowser = false;
+  visible = false;
+
+  constructor(@Inject(PLATFORM_ID) platformId: object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+
+    if (this.isBrowser) {
+      queueMicrotask(() => {
+        this.visible = true;
+      });
+    }
+  }
+
+  close() {
+    this.visible = false;
+  }
+
+  navegar(url: string) {
+    window.open(url, '_blank', 'noopener');
+  }
 }
