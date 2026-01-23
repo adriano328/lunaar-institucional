@@ -9,14 +9,15 @@ import { Equipe } from '../equipe/equipe';
 import { Parceiros } from '../parceiros/parceiros';
 import { ColetaDoacoes } from '../coleta-doacoes/coleta-doacoes';
 import { Arrecadacao } from '../arrecadacao/arrecadacao';
+import { DenunciaComponent } from '../denuncia/denuncia.component';
 
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
   imports: [
-    Sobre, Historia, Banner, Fazemos, Missao, Equipe,
-    Parceiros, ColetaDoacoes, Arrecadacao
+    Sobre, Historia, Banner, Fazemos, Equipe,
+    Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent
   ],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',

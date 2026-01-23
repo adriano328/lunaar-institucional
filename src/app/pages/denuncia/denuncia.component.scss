@@ -1,0 +1,163 @@
+/* CONTAINER PADRÃO */
+.container-principal {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* WRAPPER */
+.denuncia-wrapper {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+/* HEADER */
+.denuncia-alert {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(90deg, #c62828, #b71c1c);
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+}
+
+.denuncia-alert-icon {
+  font-size: 36px;
+}
+
+.denuncia-alert-text h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.denuncia-alert-text p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* GRID */
+.denuncia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 1.5rem;
+}
+
+/* CARD */
+.denuncia-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.denuncia-box h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ITENS */
+.denuncia-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #222;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.denuncia-item:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.denuncia-item span.material-symbols-outlined {
+  font-size: 20px;
+}
+
+.denuncia-item strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.denuncia-item span {
+  font-size: 0.9rem;
+}
+
+.destaque-verde {
+  border-top: 4px solid #2e7d32;
+}
+
+.destaque-azul {
+  border-top: 4px solid #1565c0;
+}
+
+small {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+@media (max-width: 1000px) {
+  .container-principal {
+    width: 85%;
+    padding: 0 12px;
+  }
+
+  .denuncia-wrapper {
+    padding: 1rem 0;
+  }
+
+  .denuncia-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .denuncia-box {
+    padding: 0.9rem;
+    border-radius: 12px;
+  }
+
+  .denuncia-alert {
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+  }
+
+  .denuncia-alert-icon {
+    font-size: 28px;
+  }
+
+  .denuncia-alert-text h2 {
+    font-size: 1.05rem;
+  }
+
+  .denuncia-alert-text p {
+    font-size: 0.85rem;
+  }
+
+  .denuncia-item {
+    align-items: flex-start;
+  }
+
+  .denuncia-item>div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .denuncia-item strong,
+  .denuncia-item span {
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .denuncia-item a {
+    overflow-wrap: anywhere;
+  }
+}
