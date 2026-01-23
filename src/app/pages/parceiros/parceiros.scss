@@ -3,3 +3,24 @@
     width: 65vw;
   }
 }
+
+@media (max-width: 992px) {
+    .container-parceiros {
+        width: 100%;
+
+        .imagem {
+            width: 75vw !important;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .container-parceiros {
+        width: 100%;
+
+        .imagem {
+            width: 85vw !important;
+        }
+    }
+}
