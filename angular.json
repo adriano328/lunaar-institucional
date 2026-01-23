@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -102,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "293f08d3-1c9a-4c89-8203-1ec0f86e1ff1"
   }
 }

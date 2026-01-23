@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p,
+span,
+div {
+    font-family: 'Inter', sans-serif;
+}
+
+.conteudo-principal {
+    width: 70% !important;
+    padding: 1em !important;
+
+    .texto {
+        font-size: 14px !important;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .conteudo-principal {
+        width: 90% !important;
+
+        .texto {
+            font-size: 14px !important;
+            font-weight: 400 !important;
+        }
+    }
+}
+
+.remove-espaco {
+    padding: 0px !important;
+    margin-bottom: 0px !important;
+}

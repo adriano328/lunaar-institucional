@@ -1,0 +1,91 @@
+@media(max-width: 992px) {
+
+  .hero_area {
+    .slider_section {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+  }
+}
+
+
+.btn {
+  padding: 12px 28px;
+  font-weight: 800;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn.solid {
+  background: #fff;
+  color: #4c4d4c;
+}
+
+.btn.outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-box {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn-hero {
+  min-width: 160px;
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 24px;
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ffffff;
+  color: #4c4d4c;
+
+  border: 2px solid #ffffff;
+
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.btn-hero.outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-hero.outline:hover {
+  background-color: #ffffff;
+  color: #4c4d4c;
+}
+
+@media (max-width: 576px) {
+  .btn-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-hero {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-animal {
+    border: 1px solid red;
+    display: none !important;
+  }
+}

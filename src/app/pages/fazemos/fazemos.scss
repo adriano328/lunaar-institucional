@@ -1,0 +1,16 @@
+.container-fazemos {
+    width: 100%;
+
+    .conteudo {
+        width: 80%;
+
+        .texto {
+            font-size: 14px;
+        }
+
+        .container-time-line {
+            display: flex;
+            justify-content: start;
+        }
+    }
+}

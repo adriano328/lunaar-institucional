@@ -1,0 +1,13 @@
+.container-sobre {
+    width: 100%;
+
+    .titulo {
+        text-align: start;
+    }
+}
+
+@media(max-width: 992px) {
+    .sobre-img {
+        display: none !important;
+    }
+}

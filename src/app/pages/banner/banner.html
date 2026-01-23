@@ -1,0 +1,28 @@
+
+<div class="flex container-banner">
+      <app-header></app-header>
+    <div class="flex flex-row grid conteudo w-full">
+        <div class="flex w-7 justify-content-center container-imagem">
+            <img src="/assets/images/slider-img.png" height="80%" alt="Animais para adoção" />
+        </div>
+        <div class="flex align-items-start container-texto flex-column w-5">
+            <div class="mt-5">
+                <h2 class="adote">ADOTE UM ANIMAL</h2>
+                <h1 class="salve">SALVE UMA VIDA</h1>
+            </div>
+            <div class="btn-box flex gap-2 flex-wrap mt-3">
+                <a href="https://wa.me/65992465672" target="_blank" rel="noopener" class="btn-hero">ADOTE</a>
+                <a href="https://wa.me/65992465672" target="_blank" rel="noopener" class="btn-hero voluntario outline">
+                    SEJA UM VOLUNTÁRIO </a>
+            </div>
+            <div class="flex flex-row gap-2">
+                <div (click)="navegar('https://www.instagram.com/projetolunaar/')" style="cursor: pointer;">
+                    <img src="/assets/images/icon-insta.png" height="30" width="30" alt="Animais para adoção" />
+                </div>
+                <div (click)="navegar('https://www.instagram.com/projetolunaar/')" style="cursor: pointer;">
+                    <img src="/assets/images/icon-insta.png" height="30" width="30" alt="Animais para adoção" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+.timeline {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.timeline-list {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 16px;
+  align-items: stretch; /* IMPORTANTE */
+}
+
+/* coluna do marcador */
+.marker-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* ponto */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #19c37d;
+  box-shadow: 0 0 0 4px rgba(25, 195, 125, 0.18);
+  margin-top: 6px;
+  z-index: 2;
+}
+
+/* linha agora é absoluta e contínua */
+.line {
+  position: absolute;
+  top: 22px;            /* começa logo abaixo do ponto */
+  bottom: -18px;        /* invade o gap até o próximo item */
+  width: 2px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* remove a linha do último item */
+.timeline-item:last-child .line {
+  display: none;
+}
+
+/* conteúdo */
+.content {
+  padding-bottom: 8px;
+}
+
+/* fontes todas finas */
+.ano {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.titulo {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.82);
+  line-height: 1.45;
+}
+
+/* mobile */
+@media (max-width: 520px) {
+  .timeline {
+    padding: 18px;
+  }
+
+  .ano,
+  .titulo,
+  .desc {
+    font-size: 0.92rem;
+    font-weight: 300;
+  }
+}
