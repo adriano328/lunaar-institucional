@@ -1,10 +1,8 @@
-import { AfterViewInit, Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { Header } from '../../core/layout/header/header';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Sobre } from '../sobre/sobre';
 import { Historia } from '../historia/historia';
 import { Banner } from '../banner/banner';
 import { Fazemos } from '../fazemos/fazemos';
-import { Missao } from '../missao/missao';
 import { Equipe } from '../equipe/equipe';
 import { Parceiros } from '../parceiros/parceiros';
 import { ColetaDoacoes } from '../coleta-doacoes/coleta-doacoes';
@@ -13,6 +11,7 @@ import { DenunciaComponent } from '../denuncia/denuncia.component';
 import { NotaMtComponent } from '../nota-mt/nota-mt.component';
 import { DialogModule } from 'primeng/dialog';
 import { isPlatformBrowser } from '@angular/common';
+import { BeecomeComponent } from '../beecome/beecome.component';
 
 
 @Component({
@@ -20,7 +19,8 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true,
   imports: [
     Sobre, Historia, Banner, Fazemos, Equipe, NotaMtComponent,
-    Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent, DialogModule
+    Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent, DialogModule,
+    BeecomeComponent
   ],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',
