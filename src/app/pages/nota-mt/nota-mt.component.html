@@ -1,11 +1,67 @@
 <div class="flex justify-content-center align-items-center container-fazemos">
-    <div class="grid conteudo-principal p-5">
-        <div class="flex flex-column gap-2 container-time-line col-12 md:col-7">
-            <div class="w-full">
+  <div class="grid conteudo-principal p-5">
 
+    <!-- ESQUERDA: GUIA + TIMELINE -->
+    <div class="col-12 md:col-7">
+      <section class="guia">
+
+        <header class="guia__header">
+          <div class="guia__badge">💛 GUIA PRÁTICO</div>
+          <h1 class="guia__title">NOTA MT + LUNAAR</h1>
+          <p class="guia__subtitle">
+            Você sabia que é possível ajudar a Lunaar <strong>sem gastar nada a mais</strong>?
+            Basta escolher a nossa associação como <strong>entidade preferida</strong> na Nota MT.
+          </p>
+        </header>
+
+        <div class="guia__content">
+          <div class="guia__intro">
+            <span class="guia__chip">Veja como é simples</span>
+          </div>
+
+          <div class="container-time-line">
+
+            <div class="time-line-item">
+              <span class="time-line-dot">1</span>
+              <div class="time-line-content">
+                <h3>Acesse a Nota MT</h3>
+                <p>Entre no site ou aplicativo da Nota MT e faça login na sua conta.</p>
+              </div>
             </div>
-            <div class="flex align-items-center justify-content-center col-12 md:col-5">
-                <app-reproducao-video [videoSrc]="'assets/video/video.mp4'"></app-reproducao-video>
+
+            <div class="time-line-item">
+              <span class="time-line-dot">2</span>
+              <div class="time-line-content">
+                <h3>Vá em “Meus Dados”</h3>
+                <p>No menu principal, clique em Meus Dados para acessar suas preferências.</p>
+              </div>
             </div>
+
+            <div class="time-line-item">
+              <span class="time-line-dot">3</span>
+              <div class="time-line-content">
+                <h3>Entidade Preferida</h3>
+                <p>Selecione Entidade Preferida, filtre por município e escolha <strong>Cuiabá</strong>.</p>
+              </div>
+            </div>
+
+            <div class="time-line-item">
+              <span class="time-line-dot success">✔</span>
+              <div class="time-line-content">
+                <h3>Escolha a Lunaar</h3>
+                <p>Selecione a Associação Lunaar e clique em <strong>Salvar</strong>.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </section>
     </div>
+
+    <!-- DIREITA: VÍDEO -->
+    <div class="flex align-items-center justify-content-center col-12 md:col-5">
+      <app-reproducao-video [videoSrc]="'assets/video/cpf-nota.mp4'"></app-reproducao-video>
+    </div>
+
+  </div>
+</div>
