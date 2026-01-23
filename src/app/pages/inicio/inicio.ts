@@ -35,7 +35,7 @@ export class Inicio {
 
     if (this.isBrowser) {
       queueMicrotask(() => {
-        this.visible = true;
+        // this.visible = true;
       });
     }
   }

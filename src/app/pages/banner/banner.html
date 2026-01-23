@@ -28,11 +28,20 @@
                 (click)="navegar('https://api.whatsapp.com/send/?phone=65992465672&text&type=phone_number&app_absent=0')"
                 style="cursor: pointer;" width="30" />
         </div>
-        <div class="flex w-full align-items-end justify-content-end gap-2 flex-column">
-            <span class="texto">CONTRIBUA (PIX)</span>
-            <img src="assets/images/pix-icon.png" alt="Associação Lunaar" style="cursor: pointer;" width="150" />
-            <span class="mt-1 texto">Cada adoção transforma duas vidas: a deles e a sua.
-            </span>
+        <div class="flex w-full align-items-center justify-content-between gap-2 flex-row">
+            <div class="flex flex-column gap-2 mt-3">
+                <span class="texto">CONTRIBUA (PIX)</span>
+                <img src="assets/images/pix-icon.png" alt="Associação Lunaar" style="cursor: pointer;" width="150" />
+                <span class="mt-1 texto">Cada adoção transforma duas vidas: a deles e a sua.
+                </span>
+            </div>
+            <div class="flex flex-column align-items-end justify-content-center gap-2  mt-3">
+                <img src="assets/images/beecome.png"
+                    (click)="navegar('https://api.whatsapp.com/send?phone=556599264106&text=Quero%20me%20tornar%20um%20assinante%20do%20Lunaar')"
+                    alt="Associação Lunaar" style="cursor: pointer;" width="150" />
+                <!-- <span class="mt-1 texto">Cada adoção transforma duas vidas: a deles e a sua. -->
+                <!-- </span> -->
+            </div>
         </div>
     </div>
 </div>
