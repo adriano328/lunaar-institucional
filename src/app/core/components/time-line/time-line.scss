@@ -33,26 +33,22 @@
   z-index: 2;
 }
 
-/* linha agora é absoluta e contínua */
 .line {
   position: absolute;
-  top: 22px;            /* começa logo abaixo do ponto */
-  bottom: -18px;        /* invade o gap até o próximo item */
+  top: 22px;            
+  bottom: -18px;       
   width: 2px;
   background: rgba(0, 0, 0, 0.12);
 }
 
-/* remove a linha do último item */
 .timeline-item:last-child .line {
   display: none;
 }
 
-/* conteúdo */
 .content {
   padding-bottom: 8px;
 }
 
-/* fontes todas finas */
 .ano {
   font-size: 0.95rem;
   font-weight: 400;
@@ -70,7 +66,7 @@
 .desc {
   font-size: 0.95rem;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.82);
+  color: rgba(0, 0, 0);
   line-height: 1.45;
 }
 
