@@ -1,0 +1,22 @@
+.p-carousel-content {
+    overflow: hidden !important;
+}
+
+.p-carousel-items-container {
+    align-items: center !important;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}

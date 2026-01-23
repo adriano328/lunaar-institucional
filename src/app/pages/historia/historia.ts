@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { TimelineModule } from 'primeng/timeline';
 import { TimeLine } from '../../core/components/time-line/time-line';
 import { TimelineItem } from '../../../interface/eventos.model';
+import { CarouselComponent } from '../../core/components/carrosel/carrosel.component';
 
 @Component({
   selector: 'app-historia',
   standalone: true,
-  imports: [TimeLine],
+  imports: [TimeLine, CarouselComponent],
   templateUrl: './historia.html',
   styleUrl: './historia.scss',
 })

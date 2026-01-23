@@ -44,3 +44,39 @@ div {
     padding: 0px !important;
     margin-bottom: 0px !important;
 }
+
+
+/* impede o carousel de "quebrar" e mostrar outro item embaixo */
+.p-carousel-items-container {
+  flex-wrap: nowrap !important;
+}
+
+/* corta qualquer vazamento de item */
+.p-carousel-content {
+  overflow: hidden !important;
+}
+
+/* trava a área do carousel (ajuste o tamanho) */
+.container-carrosel {
+  height: 420px;
+  overflow: hidden;
+}
+
+/* garante que cada item ocupe a altura toda */
+.container-carrosel .carousel-item {
+  height: 100%;
+}
+
+/* imagem preenchendo corretamente */
+.container-carrosel .carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.p-carousel-prev,
+.p-carousel-next {
+  display: none !important;
+}
