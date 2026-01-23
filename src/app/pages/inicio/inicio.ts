@@ -31,7 +31,9 @@ export class Inicio {
   isBrowser = false;
   visible = false;
 
-  constructor(@Inject(PLATFORM_ID) platformId: object) {
+  constructor(
+    @Inject(PLATFORM_ID) platformId: object,
+  ) {
     this.isBrowser = isPlatformBrowser(platformId);
 
     if (this.isBrowser) {
@@ -48,4 +50,5 @@ export class Inicio {
   navegar(url: string) {
     window.open(url, '_blank', 'noopener');
   }
+
 }
