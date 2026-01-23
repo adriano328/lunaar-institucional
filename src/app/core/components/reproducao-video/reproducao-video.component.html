@@ -10,8 +10,15 @@
 
   <div class="video-overlay"></div>
 
-  <div class="video-content" *ngIf="title || subtitle">
-    <h1 *ngIf="title">{{ title }}</h1>
-    <p *ngIf="subtitle">{{ subtitle }}</p>
-  </div>
+  @if (title || subtitle) {
+    <div class="video-content">
+      @if (title) {
+        <h1>{{ title }}</h1>
+      }
+
+      @if (subtitle) {
+        <p>{{ subtitle }}</p>
+      }
+    </div>
+  }
 </div>
