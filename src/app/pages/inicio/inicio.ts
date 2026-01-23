@@ -10,13 +10,14 @@ import { Parceiros } from '../parceiros/parceiros';
 import { ColetaDoacoes } from '../coleta-doacoes/coleta-doacoes';
 import { Arrecadacao } from '../arrecadacao/arrecadacao';
 import { DenunciaComponent } from '../denuncia/denuncia.component';
+import { NotaMtComponent } from '../nota-mt/nota-mt.component';
 
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
   imports: [
-    Sobre, Historia, Banner, Fazemos, Equipe,
+    Sobre, Historia, Banner, Fazemos, Equipe, NotaMtComponent,
     Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent
   ],
   templateUrl: './inicio.html',
