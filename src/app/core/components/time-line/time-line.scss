@@ -17,14 +17,12 @@
   align-items: stretch; /* IMPORTANTE */
 }
 
-/* coluna do marcador */
 .marker-col {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-/* ponto */
 .dot {
   width: 12px;
   height: 12px;
@@ -63,7 +61,7 @@
 }
 
 .titulo {
-  font-size: 0.95rem;
+  font-size: 12px;
   font-weight: 400;
   color: #111;
   margin-bottom: 6px;
