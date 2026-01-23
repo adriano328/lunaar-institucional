@@ -13,6 +13,7 @@ import { DialogModule } from 'primeng/dialog';
 import { isPlatformBrowser } from '@angular/common';
 import { BeecomeComponent } from '../beecome/beecome.component';
 import { EnergisaComponent } from '../energisa/energisa.component';
+import { CastramovelComponent } from '../castramovel/castramovel.component';
 
 
 @Component({
@@ -21,7 +22,7 @@ import { EnergisaComponent } from '../energisa/energisa.component';
   imports: [
     Sobre, Historia, Banner, Fazemos, Equipe, NotaMtComponent,
     Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent, DialogModule,
-    BeecomeComponent, EnergisaComponent
+    BeecomeComponent, EnergisaComponent, CastramovelComponent
   ],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',
