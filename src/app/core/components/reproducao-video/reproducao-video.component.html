@@ -1,24 +1,27 @@
-<div class="video-institucional">
+<div class="video-institucional" (click)="togglePlay()">
   <video
+    #player
     [src]="videoSrc"
-    autoplay
-    loop
-    muted
-    playsinline
+    [autoplay]="autoplay"
+    [muted]="muted"
+    [loop]="loop"
+    [attr.playsinline]="playsInline ? '' : null"
     preload="auto"
   ></video>
 
   <div class="video-overlay"></div>
 
+  @if (!isPlaying && showPlayOverlay && !autoplay) {
+    <button class="video-play" type="button" aria-label="Reproduzir vídeo">
+      <span class="material-symbols-outlined">play_arrow</span>
+      <span>Assistir</span>
+    </button>
+  }
+
   @if (title || subtitle) {
     <div class="video-content">
-      @if (title) {
-        <h1>{{ title }}</h1>
-      }
-
-      @if (subtitle) {
-        <p>{{ subtitle }}</p>
-      }
+      @if (title) { <h1>{{ title }}</h1> }
+      @if (subtitle) { <p>{{ subtitle }}</p> }
     </div>
   }
 </div>
