@@ -1,0 +1,17 @@
+<div class="video-institucional">
+  <video
+    [src]="videoSrc"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+  ></video>
+
+  <div class="video-overlay"></div>
+
+  <div class="video-content" *ngIf="title || subtitle">
+    <h1 *ngIf="title">{{ title }}</h1>
+    <p *ngIf="subtitle">{{ subtitle }}</p>
+  </div>
+</div>

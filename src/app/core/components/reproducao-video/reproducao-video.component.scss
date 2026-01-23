@@ -1,0 +1,67 @@
+.video-institucional {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #000;
+}
+
+.video-institucional video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.1) contrast(1.05) saturate(1.05);
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.video-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+  color: #ffffff;
+}
+
+.video-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.video-content p {
+  max-width: 520px;
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 768px) {
+  .video-institucional {
+    height: 55vh;
+    border-radius: 0;
+  }
+
+  .video-content {
+    padding: 1.5rem;
+  }
+
+  .video-content p {
+    font-size: 1rem;
+  }
+}
