@@ -12,6 +12,7 @@ import { NotaMtComponent } from '../nota-mt/nota-mt.component';
 import { DialogModule } from 'primeng/dialog';
 import { isPlatformBrowser } from '@angular/common';
 import { BeecomeComponent } from '../beecome/beecome.component';
+import { EnergisaComponent } from '../energisa/energisa.component';
 
 
 @Component({
@@ -20,7 +21,7 @@ import { BeecomeComponent } from '../beecome/beecome.component';
   imports: [
     Sobre, Historia, Banner, Fazemos, Equipe, NotaMtComponent,
     Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent, DialogModule,
-    BeecomeComponent
+    BeecomeComponent, EnergisaComponent
   ],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',
