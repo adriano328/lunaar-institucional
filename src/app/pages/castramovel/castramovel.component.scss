@@ -1,17 +1,115 @@
 .container-sobre {
+  width: 100%;
+
+  .imagem {
+    border-radius: 10px;
+  }
+
+  .titulo {
+    text-align: start;
+  }
+
+  /* BLOCO IMPACTO */
+  .impacto {
     width: 100%;
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.10);
+    background: rgba(0,0,0,0.02);
 
-    .imagem {
-        border-radius: 10px;
+    .impacto-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
     }
 
-    .titulo {
-        text-align: start;
+    .impacto-titulo {
+      margin: 0;
+      font-size: 16px;
     }
+
+    .impacto-sub {
+      font-size: 13px;
+      color: rgba(0,0,0,0.60);
+    }
+
+    .impacto-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .impacto-card {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.10);
+      background: #fff;
+
+      .impacto-ano {
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.55);
+      }
+
+      .impacto-numero {
+        font-size: 28px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+      }
+
+      .impacto-label {
+        font-size: 13px;
+        color: rgba(0,0,0,0.70);
+      }
+
+      &.destaque {
+        border-color: rgba(0,0,0,0.14);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+      }
+
+      &.total {
+        background: rgba(0,0,0,0.04);
+      }
+    }
+
+    .impacto-rodape {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 12px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: rgba(0,0,0,0.08);
+    }
+
+    .nota {
+      font-size: 13px;
+      color: rgba(0,0,0,0.70);
+    }
+  }
 }
 
-@media(max-width: 992px) {
-    .sobre-img {
-        display: none !important;
-    }
+/* seu responsive (corrigi pra usar .sobre-img que você já tem) */
+@media (max-width: 992px) {
+  .sobre-img {
+    display: none !important;
+  }
+
+  .container-sobre .impacto .impacto-cards {
+    grid-template-columns: 1fr;
+  }
 }

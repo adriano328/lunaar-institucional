@@ -36,6 +36,11 @@ export class Historia implements OnInit {
         ano: 2023,
         descricao:
           "Compramos um terreno e construímos um espaço com 9 canis, incluindo um para animais paraplégicos, lavanderia e 2 petparks. Também conquistamos o título de utilidade pública municipal em Cuiabá - MT."
+      },
+      {
+        ano: 2024,
+        descricao:
+          "Inicio de atuação do Castramóvel."
       }
     ];
   }
