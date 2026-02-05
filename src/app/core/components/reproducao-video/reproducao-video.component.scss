@@ -1,27 +1,33 @@
+/* video-institucional.component.css */
+
+/* Card vertical mais compacto (não hero) */
 .video-institucional {
   position: relative;
   width: 100%;
-  height: 70vh;
-  min-height: 420px;
+  max-width: 420px;  /* controla o “tamanho da caixa” no desktop */
+  height: 480px;     /* altura do card */
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   background-color: #000;
+  box-shadow: 0 14px 36px rgba(16, 24, 40, 0.18);
+  cursor: pointer;
 }
 
 .video-institucional video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(1.1) contrast(1.05) saturate(1.05);
+  filter: brightness(1.05) contrast(1.05) saturate(1.05);
 }
 
+/* escurece levemente para legibilidade do texto/botão */
 .video-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.12) 0%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgba(0, 0, 0, 0.32) 100%
   );
   z-index: 1;
 }
@@ -33,37 +39,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 3rem;
+  padding: 1.75rem;
   color: #ffffff;
 }
 
 .video-content h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
   margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .video-content p {
-  max-width: 520px;
-  margin-top: 0.75rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.95);
-}
-
-@media (max-width: 768px) {
-  .video-institucional {
-    height: 55vh;
-    border-radius: 0;
-  }
-
-  .video-content {
-    padding: 1.5rem;
-  }
-
-  .video-content p {
-    font-size: 1rem;
-  }
 }
 
 .video-play {
@@ -73,15 +64,36 @@
   z-index: 3;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
+  gap: 6px;
+  padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.45);
   color: #fff;
   cursor: pointer;
 }
 
 .video-play .material-symbols-outlined {
-  font-size: 22px;
+  font-size: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .video-institucional {
+    max-width: 100%;
+    height: 360px;
+    border-radius: 16px;
+  }
+
+  .video-content {
+    padding: 1.25rem;
+  }
+
+  .video-content h1 {
+    font-size: 1.25rem;
+  }
+
+  .video-content p {
+    font-size: 0.9rem;
+  }
 }

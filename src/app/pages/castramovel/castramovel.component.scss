@@ -103,13 +103,4 @@
   }
 }
 
-/* seu responsive (corrigi pra usar .sobre-img que você já tem) */
-@media (max-width: 992px) {
-  .sobre-img {
-    display: none !important;
-  }
 
-  .container-sobre .impacto .impacto-cards {
-    grid-template-columns: 1fr;
-  }
-}
