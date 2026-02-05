@@ -1,12 +1,37 @@
 <div class="flex justify-content-center align-items-center container-equipe">
-    <div class="grid conteudo-principal">
-        <div class="flex flex-column align-items-start justify-content-center container-time-line col-12 md:col-12">
-            <h3 style="text-align: left;">Diretoria</h3>
-            <p class="texto">Este é o time que transforma cuidado em ação e faz com que cada parte dessa engrenagem
-                funcione com propósito, dedicação e amor à causa.</p>
-        </div>
-        <div class="flex align-items-center justify-content-center col-12 md:col-12">
-            <img src="/assets/images/team.png" class="imagem" alt="Animais para adoção" />
-        </div>
+  <div class="grid conteudo-principal">
+
+    <div
+      class="flex flex-column align-items-start justify-content-center container-time-line col-12 md:col-12"
+    >
+      <h3>Diretoria</h3>
+      <p class="texto">
+        Este é o time que transforma cuidado em ação e faz com que cada parte
+        dessa engrenagem funcione com propósito, dedicação e amor à causa.
+      </p>
     </div>
+
+    <section class="team-grid" aria-label="Equipe da ONG">
+      @for (member of members; track member.name) {
+        <article class="team-card">
+          <div class="avatar-wrap">
+            <div class="blob" aria-hidden="true"></div>
+            <img
+              class="avatar"
+              [src]="member.photoUrl"
+              [alt]="member.name"
+              loading="lazy"
+            />
+          </div>
+
+          <h3 class="name">{{ member.name }}</h3>
+
+          @if (member.role) {
+            <p class="role">{{ member.role }}</p>
+          }
+        </article>
+      }
+    </section>
+
+  </div>
 </div>
