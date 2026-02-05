@@ -60,11 +60,14 @@ h3 {
 }
 
 .logo-wrap {
+  position: relative;         /* ✅ referência para o .seal absoluto */
+  width: 150px;               /* ✅ dá tamanho para o anel */
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
+
 
 .logo {
   width: 150px;
@@ -82,13 +85,14 @@ h3 {
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;       /* opcional: não atrapalha hover/click */
 }
 
 .seal::before {
   content: "";
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 130px;   /* > 150 */
+  height: 130px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -99,8 +103,8 @@ h3 {
 .seal::after {
   content: "";
   position: absolute;
-  width: 116px;
-  height: 116px;
+  width: 140px;   /* ligeiramente > 150 */
+  height: 140px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -149,8 +153,8 @@ h3 {
   }
 
   .logo-wrap {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
   }
 
   .logo {
@@ -158,13 +162,13 @@ h3 {
     height: 120px;
   }
 
-  .seal::before {
-    width: 150px;
-    height: 150px;
+ .seal::before {
+    width: 138px;
+    height: 138px;
   }
 
-  .seal::after {
-    width: 126px;
-    height: 126px;
+    .seal::after {
+    width: 128px;
+    height: 128px;
   }
 }
