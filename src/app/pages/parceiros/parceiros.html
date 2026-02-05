@@ -1,10 +1,21 @@
-<div class="flex justify-content-center align-items-center container-parceiros w-full">
-  <div class="flex flex-column justify-content-center align-items-center conteudo-principal">
-    <div class="flex justify-content-center align-items-center">
-      <h3 class="titulo">Parceiros</h3>
+<div class="flex justify-content-center align-items-center container-parceiros">
+  <div class="grid conteudo-principal">
+    <div class="flex flex-column align-items-start justify-content-center col-12">
+      <h3>Parceiros</h3>
+      <p class="texto">
+        Empresas e pessoas que fortalecem a nossa causa e fazem a diferença todos os dias.
+      </p>
     </div>
-    <div class="flex justify-content-center align-items-center conteudo-principal">
-      <img src="/assets/images/partiners.png" width="100%" class="imagem" alt="Animais para adoção" />
-    </div>
+
+    <section class="partners-grid" aria-label="Parceiros">
+      @for (p of partners; track p.name) {
+        <article class="partner-card" [attr.aria-label]="p.name">
+          <div class="logo-wrap" title="{{ p.name }}">
+            <div class="seal" aria-hidden="true"></div>
+            <img class="logo" [src]="p.logoUrl" [alt]="p.name" loading="lazy" />
+          </div>
+        </article>
+      }
+    </section>
   </div>
 </div>
