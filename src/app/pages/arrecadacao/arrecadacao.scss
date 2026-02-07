@@ -1,2 +1,115 @@
 .container-arrecadacao { width: 100%; }
 
+/* Cards - estilo igual ao design de "castrações realizadas" */
+.stats {
+  width: 100%;
+  max-width: 520px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e9e9ee;
+}
+
+.stats__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.stats__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1f1f24;
+}
+
+.stats__subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #6b6b76;
+}
+
+/* 3 cards em grid (fica 2+1 no md:col-5 e vira 1 coluna no mobile) */
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.card {
+  background: #f6f6f8;
+  border: 1px solid #ededf3;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.container-time-line {
+    
+}
+
+.card__meta {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b6b76;
+  margin-bottom: 6px;
+}
+
+.card__value {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #111116;
+}
+
+.card__unit {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b6b76;
+  margin-top: 4px;
+}
+
+.card__label {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #4c4c56;
+}
+
+/* Total com leve destaque */
+.card--total {
+  background: #f1f2f6;
+  border-color: #e2e4ee;
+}
+
+.stats__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #eeeeff;
+  border: 1px solid #e4e4ff;
+  font-size: 12px;
+  color: #3d3d86;
+}
+
+.stats__footnote {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #6b6b76;
+  line-height: 1.4;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+  .card__value {
+    font-size: 24px;
+  }
+}

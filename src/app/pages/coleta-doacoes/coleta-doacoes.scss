@@ -1,8 +1,6 @@
-/* Tons e estilo do grid “Parceiros” (2ª imagem): branco + bege suave + sombras leves */
-
 .parceiros-container {
   width: 100%;
-  padding: 56px 0;
+  padding: 0px;
 }
 
 .titulo {
@@ -16,7 +14,6 @@
 .conteudo-principal {
   width: min(1180px, 92vw);
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: 15px;
