@@ -1,4 +1,3 @@
-// avisos-mural.component.ts
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DialogModule } from 'primeng/dialog';
@@ -14,14 +13,12 @@ export type AvisoMuralItem = {
   link?: string;
   badge?: string;
 
-  /** ✅ controles por item (defaults = true) */
+  // controles por item
   showTitulo?: boolean;
   showDescricao?: boolean;
   showCTA?: boolean;
   clickable?: boolean;
-
-  /** opcional */
-  ctaLabel?: string; // default: "Clique para abrir"
+  ctaLabel?: string;
 };
 
 @Component({
@@ -46,8 +43,7 @@ export class AvisosMuralComponent {
     this.visibleChange.emit(false);
   }
 
-  // ----- helpers (defaults true) -----
-  private dTrue(v: boolean | undefined) {
+  private dTrue(v?: boolean) {
     return v ?? true;
   }
 
@@ -68,10 +64,9 @@ export class AvisosMuralComponent {
   }
 
   getCtaLabel(item: AvisoMuralItem) {
-    return item.ctaLabel?.trim() || 'Clique para abrir';
+    return item.ctaLabel || 'Clique para abrir';
   }
 
-  // ----- actions -----
   openLink(item: AvisoMuralItem) {
     if (!this.isClickable(item)) return;
     window.open(item.link!, '_blank', 'noopener,noreferrer');

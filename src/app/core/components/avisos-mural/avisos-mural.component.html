@@ -1,4 +1,3 @@
-<!-- avisos-mural.component.html -->
 <div class="mural-wrapper">
   <p-dialog
     [(visible)]="visible"
@@ -6,16 +5,30 @@
     [modal]="true"
     [dismissableMask]="true"
     [appendTo]="'body'"
+    [showHeader]="false"
+    [draggable]="false"
     [style]="{ width: width, maxWidth: maxWidth }"
     [contentStyle]="{ padding: '1rem' }"
     (onHide)="close()"
   >
+    <!-- ❎ Botão X flutuante -->
+    <button
+      type="button"
+      class="close-btn"
+      aria-label="Fechar avisos"
+      (click)="close()"
+    >
+      ✕
+    </button>
+
+    <!-- Cabeçalho custom -->
     <div class="mural-header">
       <div class="clip"></div>
       <h2 class="mural-title">{{ title }}</h2>
       <div class="clip"></div>
     </div>
 
+    <!-- Grid -->
     <div class="mural-grid">
       <button
         type="button"
@@ -25,9 +38,11 @@
         (click)="openLink(item)"
         [style.height.px]="cardHeight"
       >
-        <span class="pin" aria-hidden="true"></span>
+        <span class="pin"></span>
 
-        <span class="badge" *ngIf="item.badge">{{ item.badge }}</span>
+        <span class="badge" *ngIf="item.badge">
+          {{ item.badge }}
+        </span>
 
         <img
           class="mural-img"
@@ -36,8 +51,10 @@
           loading="lazy"
         />
 
-        <!-- ✅ overlay controlado por item -->
-        <div class="overlay" *ngIf="showTitulo(item) || showDescricao(item)">
+        <div
+          class="overlay"
+          *ngIf="showTitulo(item) || showDescricao(item)"
+        >
           <div class="overlay-title" *ngIf="showTitulo(item)">
             {{ item.titulo }}
           </div>
@@ -47,7 +64,6 @@
           </div>
         </div>
 
-        <!-- ✅ CTA controlado por item -->
         <button
           type="button"
           class="cta"

@@ -74,14 +74,14 @@ export class Inicio {
       descricao: 'Vote na Lunaar e participe.',
       imgSrc: 'assets/images/sicredi.png',
       alt: 'Campanha Sicredi',
-      link: 'https://SUA-URL-AQUI',
+      link: 'https://www.sicredi.com.br/coop/ouroverdemt/fundo-social/',
       badge: 'NOVO',
 
       // exemplo: só imagem + CTA, sem texto, e card não clicável
       showTitulo: false,
       showDescricao: false,
       showCTA: false,
-      clickable: false,
+      clickable: true,
       ctaLabel: ''
     }
   ];
