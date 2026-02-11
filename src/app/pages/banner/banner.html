@@ -1,47 +1,51 @@
 <div class="flex flex-column container-banner">
-    <div class="flex justify-content-end logo">
-        <img src="assets/images/logo-fundo-transparente-tracado-branco.png" alt="Associação Lunaar"
-            style="cursor: pointer;" width="100" />
-    </div>
-
-    <div class="flex align-items-start justify-content-center flex-column p-5">
+  <div class="flex justify-content-between w-full h-full">
+    <div class="flex align-items-center">
+      <div class="flex align-items-start justify-content-center p-3 flex-column">
         <div class="flex flex-column">
-            <span class="adote">ADOTE UM ANIMAL</span>
-            <span class="salve">SALVE UMA VIDA</span>
+          <span class="adote">ADOTE UM ANIMAL</span>
+          <span class="salve">SALVE UMA VIDA</span>
         </div>
         <div class="flex gap-2 mt-3 contianer-botoes">
-            <div class="botao-adote" (click)="navegar('https://wa.me/65992465672')">
-                <span class="texto">ADOTE</span>
-            </div>
-            <div class="botao-voluntario" (click)="navegar('https://wa.me/65992465672')">
-                <span class="texto">SEJA VOLUNTÁRIO</span>
-            </div>
+          <div class="botao-adote" (click)="navegar('https://wa.me/65992465672')">
+            <span class="texto">ADOTE</span>
+          </div>
+          <div class="botao-voluntario" (click)="navegar('https://wa.me/65992465672')">
+            <span class="texto">SEJA VOLUNTÁRIO</span>
+          </div>
         </div>
         <div class="flex gap-3 pt-2">
-            <img src="assets/images/icon-insta.png"
-                (click)="navegar('https://www.instagram.com/projetolunaar/reels/?__d=1%2F')" alt="Associação Lunaar"
-                style="cursor: pointer;" width="30" />
-            <img src="assets/images/icon-face.png" alt="Associação Lunaar"
-                (click)="navegar('https://www.facebook.com/ProjetoLunaar/?locale=pt_BR')" style="cursor: pointer;"
-                width="30" />
-            <img src="assets/images/icon-whats.png" alt="Associação Lunaar"
-                (click)="navegar('https://api.whatsapp.com/send/?phone=65992465672&text&type=phone_number&app_absent=0')"
-                style="cursor: pointer;" width="30" />
+          <img src="assets/images/icon-insta.png"
+            (click)="navegar('https://www.instagram.com/projetolunaar/reels/?__d=1%2F')" alt="Associação Lunaar"
+            style="cursor: pointer;" width="30" />
+          <img src="assets/images/icon-face.png" alt="Associação Lunaar"
+            (click)="navegar('https://www.facebook.com/ProjetoLunaar/?locale=pt_BR')" style="cursor: pointer;"
+            width="30" />
+          <img src="assets/images/icon-whats.png" alt="Associação Lunaar"
+            (click)="navegar('https://api.whatsapp.com/send/?phone=65992465672&text&type=phone_number&app_absent=0')"
+            style="cursor: pointer;" width="30" />
         </div>
-        <div class="flex w-full align-items-center justify-content-between gap-2 flex-row">
-            <div class="flex flex-column gap-2 mt-3">
-                <span class="texto">CONTRIBUA (PIX)</span>
-                <img src="assets/images/pix-icon.png" alt="Associação Lunaar" style="cursor: pointer;" width="150" />
-                <span class="mt-1 texto">Cada adoção transforma duas vidas: a deles e a sua.
-                </span>
-            </div>
-            <div class="flex flex-column align-items-end justify-content-center gap-2  mt-3">
-                <img src="assets/images/beecome.png"
-                    (click)="navegar('https://api.whatsapp.com/send?phone=556599264106&text=Quero%20me%20tornar%20um%20assinante%20do%20Lunaar')"
-                    alt="Associação Lunaar" style="cursor: pointer;" width="150" />
-                <!-- <span class="mt-1 texto">Cada adoção transforma duas vidas: a deles e a sua. -->
-                <!-- </span> -->
-            </div>
+        <div class="flex flex-column gap-2 mt-3">
+          <span class="texto">CONTRIBUA (PIX)</span>
+          <img src="assets/images/pix-icon.png" alt="Associação Lunaar" style="cursor: pointer;" width="150" />
+          <span class="mt-1 texto">Cada adoção transforma duas vidas: a deles e a sua.
+          </span>
         </div>
+      </div>
     </div>
+    <div class="flex flex-column justify-content-around align-items-center h-full">
+      <div class="flex justify-content-end logo">
+        <img src="assets/images/logo-fundo-transparente-tracado-branco.png" alt="Associação Lunaar"
+          style="cursor: pointer;" width="100" />
+      </div>
+      <div class="flex justify-content-end logo">
+        <img src="assets/images/forum.png"  (click)="navegar('https://forumanimal.org/')" alt="Associação Lunaar" style="cursor: pointer;" width="150" />
+      </div>
+      <div class="flex justify-content-end logo">
+        <img src="assets/images/beecome.png"
+          (click)="navegar('https://api.whatsapp.com/send?phone=556599264106&text=Quero%20me%20tornar%20um%20assinante%20do%20Lunaar')"
+          alt="Associação Lunaar" style="cursor: pointer;" width="150" />
+      </div>
+    </div>
+  </div>
 </div>
