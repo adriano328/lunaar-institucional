@@ -1,0 +1,163 @@
+/* avisos-mural.component.scss */
+
+.mural-wrapper {
+  width: 100%;
+}
+
+/* Cabeçalho “mural” */
+.mural-header {
+  position: relative;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff8d8 0%, #ffeaa3 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.mural-title {
+  margin: 0;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  color: #2b2b2b;
+}
+
+.clip {
+  width: 28px;
+  height: 18px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.12);
+  transform: rotate(-2deg);
+}
+
+/* Grid */
+.mural-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Card */
+.mural-card {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 0;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: rotate(-0.4deg);
+}
+
+.mural-card:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.mural-card.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mural-card.clickable:hover {
+  transform: scale(1.015) rotate(0deg);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.18);
+}
+
+/* Alfinete */
+.pin {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #fff 0 25%, #d62929 26% 100%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+  z-index: 3;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 3;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+}
+
+/* Imagem */
+.mural-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 12px 54px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  color: #fff;
+  z-index: 2;
+}
+
+.overlay-title {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.overlay-desc {
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.92;
+}
+
+/* CTA (botão real) */
+.cta {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  z-index: 3;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-weight: 800;
+  font-size: 12px;
+  border: 0;
+  cursor: pointer;
+}
+
+.cta:hover {
+  filter: brightness(0.97);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .mural-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mural-card {
+    height: auto !important;
+    aspect-ratio: 3 / 4;
+  }
+}

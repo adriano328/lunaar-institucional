@@ -14,6 +14,8 @@ import { isPlatformBrowser } from '@angular/common';
 import { BeecomeComponent } from '../beecome/beecome.component';
 import { EnergisaComponent } from '../energisa/energisa.component';
 import { CastramovelComponent } from '../castramovel/castramovel.component';
+import { CarouselModule } from 'primeng/carousel';
+import { AvisoMuralItem, AvisosMuralComponent } from '../../core/components/avisos-mural/avisos-mural.component';
 
 
 @Component({
@@ -22,7 +24,7 @@ import { CastramovelComponent } from '../castramovel/castramovel.component';
   imports: [
     Sobre, Historia, Banner, Fazemos, Equipe, NotaMtComponent,
     Parceiros, ColetaDoacoes, Arrecadacao, DenunciaComponent, DialogModule,
-    BeecomeComponent, EnergisaComponent, CastramovelComponent
+    BeecomeComponent, EnergisaComponent, CastramovelComponent, AvisosMuralComponent
   ],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss',
@@ -30,7 +32,7 @@ import { CastramovelComponent } from '../castramovel/castramovel.component';
 export class Inicio {
 
   isBrowser = false;
-  visible = false;
+  avisosVisible = false;
 
   constructor(
     @Inject(PLATFORM_ID) platformId: object,
@@ -39,17 +41,49 @@ export class Inicio {
 
     if (this.isBrowser) {
       queueMicrotask(() => {
-        this.visible = true;
+        this.avisosVisible = true;
       });
     }
   }
 
   close() {
-    this.visible = false;
+    this.avisosVisible = false;
   }
 
   navegar(url: string) {
     window.open(url, '_blank', 'noopener');
   }
+
+  avisos: AvisoMuralItem[] = [
+    {
+      titulo: 'Rifa Solidária',
+      descricao: 'Concorra e ajude a Lunaar.',
+      imgSrc: 'assets/images/rifa.jpg',
+      alt: 'Rifa solidária',
+      link: 'https://rifa.digital/s/GBrREYKwaDJ',
+      badge: 'DESTAQUE',
+
+      showTitulo: false,
+      showDescricao: false,
+      showCTA: false,
+      clickable: true,
+      ctaLabel: 'Abrir rifa'
+    },
+    {
+      titulo: 'Sicredi Fundo Social',
+      descricao: 'Vote na Lunaar e participe.',
+      imgSrc: 'assets/images/sicredi.png',
+      alt: 'Campanha Sicredi',
+      link: 'https://SUA-URL-AQUI',
+      badge: 'NOVO',
+
+      // exemplo: só imagem + CTA, sem texto, e card não clicável
+      showTitulo: false,
+      showDescricao: false,
+      showCTA: false,
+      clickable: false,
+      ctaLabel: ''
+    }
+  ];
 
 }

@@ -1,0 +1,62 @@
+<!-- avisos-mural.component.html -->
+<div class="mural-wrapper">
+  <p-dialog
+    [(visible)]="visible"
+    (visibleChange)="visibleChange.emit($event)"
+    [modal]="true"
+    [dismissableMask]="true"
+    [appendTo]="'body'"
+    [style]="{ width: width, maxWidth: maxWidth }"
+    [contentStyle]="{ padding: '1rem' }"
+    (onHide)="close()"
+  >
+    <div class="mural-header">
+      <div class="clip"></div>
+      <h2 class="mural-title">{{ title }}</h2>
+      <div class="clip"></div>
+    </div>
+
+    <div class="mural-grid">
+      <button
+        type="button"
+        class="mural-card"
+        *ngFor="let item of items"
+        [class.clickable]="isClickable(item)"
+        (click)="openLink(item)"
+        [style.height.px]="cardHeight"
+      >
+        <span class="pin" aria-hidden="true"></span>
+
+        <span class="badge" *ngIf="item.badge">{{ item.badge }}</span>
+
+        <img
+          class="mural-img"
+          [src]="item.imgSrc"
+          [alt]="item.alt || item.titulo || 'Aviso'"
+          loading="lazy"
+        />
+
+        <!-- ✅ overlay controlado por item -->
+        <div class="overlay" *ngIf="showTitulo(item) || showDescricao(item)">
+          <div class="overlay-title" *ngIf="showTitulo(item)">
+            {{ item.titulo }}
+          </div>
+
+          <div class="overlay-desc" *ngIf="showDescricao(item)">
+            {{ item.descricao }}
+          </div>
+        </div>
+
+        <!-- ✅ CTA controlado por item -->
+        <button
+          type="button"
+          class="cta"
+          *ngIf="showCTA(item)"
+          (click)="openLinkFromCTA(item, $event)"
+        >
+          {{ getCtaLabel(item) }}
+        </button>
+      </button>
+    </div>
+  </p-dialog>
+</div>
