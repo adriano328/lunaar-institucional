@@ -69,11 +69,11 @@ export class Inicio {
       ctaLabel: 'Abrir rifa'
     },
     {
-      titulo: 'Sicredi Fundo Social',
+      titulo: 'ST PET`RICKS DAY',
       descricao: 'Vote na Lunaar e participe.',
       imgSrc: 'assets/images/festa.jpg',
       alt: 'Campanha Sicredi',
-      link: 'https://www.sicredi.com.br/coop/ouroverdemt/fundo-social/',
+      link: 'https://facepassbrasil.com.br/evento/6b7b0f27-3232-4663-9a69-5b439b0d0b29/ingressos',
       badge: 'NOVO',
       showTitulo: false,
       showDescricao: false,
