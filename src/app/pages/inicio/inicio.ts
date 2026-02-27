@@ -58,11 +58,10 @@ export class Inicio {
     {
       titulo: 'Rifa Solidária',
       descricao: 'Concorra e ajude a Lunaar.',
-      imgSrc: 'assets/images/rifa.jpg',
-      alt: 'Rifa solidária',
-      link: 'https://rifa.digital/s/GBrREYKwaDJ',
+      imgSrc: 'assets/images/camisa.png',
+      alt: 'Campanha Camisa',
+      link: 'https://reserva.ink/chicaoloja/collections/adote',
       badge: 'DESTAQUE',
-
       showTitulo: false,
       showDescricao: false,
       showCTA: false,
@@ -72,12 +71,10 @@ export class Inicio {
     {
       titulo: 'Sicredi Fundo Social',
       descricao: 'Vote na Lunaar e participe.',
-      imgSrc: 'assets/images/sicredi.png',
+      imgSrc: 'assets/images/festa.jpg',
       alt: 'Campanha Sicredi',
       link: 'https://www.sicredi.com.br/coop/ouroverdemt/fundo-social/',
       badge: 'NOVO',
-
-      // exemplo: só imagem + CTA, sem texto, e card não clicável
       showTitulo: false,
       showDescricao: false,
       showCTA: false,

@@ -11,7 +11,7 @@
     [contentStyle]="{ padding: '1rem' }"
     (onHide)="close()"
   >
-    <!-- ❎ Botão X flutuante -->
+    <!-- BOTÃO FECHAR -->
     <button
       type="button"
       class="close-btn"
@@ -21,15 +21,18 @@
       ✕
     </button>
 
-    <!-- Cabeçalho custom -->
+    <!-- HEADER -->
     <div class="mural-header">
       <div class="clip"></div>
       <h2 class="mural-title">{{ title }}</h2>
       <div class="clip"></div>
     </div>
 
-    <!-- Grid -->
-    <div class="mural-grid">
+    <!-- GRID -->
+    <div
+      class="mural-grid"
+      [class.single-item]="items?.length === 1"
+    >
       <button
         type="button"
         class="mural-card"
