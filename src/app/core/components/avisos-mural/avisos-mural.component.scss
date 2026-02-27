@@ -1,5 +1,17 @@
+/* avisos-mural.component.scss */
+
 .mural-wrapper {
   width: 100%;
+}
+
+/* ✅ garante que o dialog respeite height/maxHeight passados por Input */
+:host ::ng-deep .p-dialog {
+  max-height: 95vh; /* fallback */
+}
+
+:host ::ng-deep .p-dialog-content {
+  height: 100%;
+  overflow: auto;
 }
 
 /* ❎ botão fechar */

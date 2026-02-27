@@ -1,3 +1,4 @@
+<!-- avisos-mural.component.html -->
 <div class="mural-wrapper">
   <p-dialog
     [(visible)]="visible"
@@ -7,8 +8,17 @@
     [appendTo]="'body'"
     [showHeader]="false"
     [draggable]="false"
-    [style]="{ width: width, maxWidth: maxWidth }"
-    [contentStyle]="{ padding: '1rem' }"
+    [style]="{
+      width: width,
+      maxWidth: maxWidth,
+      height: height,
+      maxHeight: maxHeight
+    }"
+    [contentStyle]="{
+      padding: '1rem',
+      height: '100%',
+      overflow: 'auto'
+    }"
     (onHide)="close()"
   >
     <!-- BOTÃO FECHAR -->
@@ -29,10 +39,7 @@
     </div>
 
     <!-- GRID -->
-    <div
-      class="mural-grid"
-      [class.single-item]="items?.length === 1"
-    >
+    <div class="mural-grid" [class.single-item]="items?.length === 1">
       <button
         type="button"
         class="mural-card"
@@ -54,10 +61,7 @@
           loading="lazy"
         />
 
-        <div
-          class="overlay"
-          *ngIf="showTitulo(item) || showDescricao(item)"
-        >
+        <div class="overlay" *ngIf="showTitulo(item) || showDescricao(item)">
           <div class="overlay-title" *ngIf="showTitulo(item)">
             {{ item.titulo }}
           </div>

@@ -1,3 +1,4 @@
+// avisos-mural.component.ts
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DialogModule } from 'primeng/dialog';
@@ -35,8 +36,15 @@ export class AvisosMuralComponent {
   @Input() title = 'AVISOS';
   @Input() items: AvisoMuralItem[] = [];
 
+  /** ✅ largura */
   @Input() maxWidth = '1000px';
   @Input() width = '70vw';
+
+  /** ✅ altura (NOVO) */
+  @Input() height = '80vh';
+  @Input() maxHeight = '90vh';
+
+  /** cards */
   @Input() cardHeight = 620;
 
   close() {

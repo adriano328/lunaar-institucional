@@ -16,9 +16,5 @@
   <app-denuncia></app-denuncia>
 </div>
 
-<app-avisos-mural
-  [(visible)]="avisosVisible"
-  [title]="'AVISOS'"
-  [items]="avisos"
-  [cardHeight]="620"
-></app-avisos-mural>
+<app-avisos-mural [(visible)]="avisosVisible" [title]="'AVISOS'" [width]="'92vw'" [maxWidth]="'1400px'"
+  [height]="'98vh'" [maxHeight]="'99vh'" [items]="avisos" [cardHeight]="550"></app-avisos-mural>
